@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"log"
 )
 
 func main() {
@@ -11,7 +12,11 @@ func main() {
 	if err != nil {
 		fmt.Println(err.Error())
 	}else{
-		body, _ := ioutil.ReadAll(res.Body)
+		body, err := ioutil.ReadAll(res.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer res.Body.Close()
 		fmt.Printf("%s", body)
 	}
 }
