@@ -1,9 +1,9 @@
-package fraction	// used in interface1.go
+package fraction	// used in interface2.go
 
 import (
   "fmt"
   "math"
-  "github.com/jetong/go_pract/gcd"
+  "github.com/jetong/go_notes/gcd"
 )
 
 type Fraction struct {

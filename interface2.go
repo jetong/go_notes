@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  "github.com/jetong/go_pract/fraction"
+  "github.com/jetong/go_notes/fraction"
 )
 
 func main() {
